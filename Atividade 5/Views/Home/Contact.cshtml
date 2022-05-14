@@ -1,0 +1,32 @@
+﻿@{
+    ViewBag.Title = "Exercicio 3";
+}
+<h2>@ViewBag.Message</h2>
+<h3>Soma de valores numéricos</h3>
+
+<form method="post">
+
+    <p>Numero 1: <input type="text" id="soma1" value="" /></p>
+    <p>Numero 2: <input type="text" id="soma2" value="" /></p>
+    <input type="button" id="btn-soma" value="Ok" onclick="calcularSoma()"/>
+    <br /><br /><p><label id ="resultado-soma"></label></p>
+</form>
+
+<script>
+    function calcularSoma() {
+        var soma1 = document.getElementById("soma1").value;
+        var soma2 = document.getElementById("soma2").value;
+        var total = parseInt(soma1) + parseInt(soma2);
+        if (soma1 == "" || soma2 == "") {
+            alert("Preencha todos os campos")
+        }
+        else if (isNaN(soma1) || isNaN(soma2)) {
+            alert("Preencha apenas valores numéricos")
+        }
+        else {
+            
+            document.getElementById("resultado-soma").innerHTML = "A soma dos valores é: " + total;
+        }
+        
+    }
+</script>

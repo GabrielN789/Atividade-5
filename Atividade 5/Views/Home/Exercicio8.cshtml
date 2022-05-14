@@ -1,0 +1,39 @@
+﻿@model Atividade_5.Models.CadastroUsuario
+@{
+    ViewBag.Title = "Exercicio 8";
+}
+<h2>Exercicio 8</h2>
+
+@using (Html.BeginForm("exibeCadastro", "Home", FormMethod.Post))
+{
+
+    <fieldset>
+        <legend>Cadastro de usuário</legend>
+    </fieldset>
+    <div>
+        @Html.LabelFor(model => model.Nome)
+    </div>
+    <div>
+        @Html.TextBoxFor(model => model.Nome)
+        @Html.ValidationMessageFor(model => model.Nome)
+    </div>
+    <div>
+        @Html.LabelFor(model => model.Email)
+    </div>
+    <div>
+        @Html.TextBoxFor(model => model.Email)
+        @Html.ValidationMessageFor(model => model.Email)
+    </div>
+    <div>
+        @Html.LabelFor(model => model.Telefone)
+    </div>
+    <div>
+        @Html.TextBoxFor(model => model.Telefone)
+        @Html.ValidationMessageFor(model => model.Telefone)
+    </div>
+    <br />
+    <div>
+        <input type="submit" value="Salvar" />
+        @section Scripts{@Scripts.Render("~/bundles/jqueryval")}
+    </div>
+}

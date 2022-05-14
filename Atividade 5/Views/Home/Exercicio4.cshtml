@@ -1,0 +1,18 @@
+﻿@{
+    ViewBag.Title = "Exercicio 4";
+}
+<h2>@ViewBag.Message</h2>
+<h3>Exibir data separada: dia, mês e ano</h3>
+
+<form method="post">
+    <p>Informe uma data: <input type="text" id="inputTextDate" value="" /></p>
+    <input type="button" id="btn-data" value="Ok" onclick="splitDate()" />    
+</form>
+
+<script>
+    function splitDate() {
+        var date = document.getElementById("inputTextDate").value;
+        date = date.split("/");
+        alert("Dia: " + date[0] + "\nMês: " + date[1] + "\nAno: " + date[2])
+    }
+</script>

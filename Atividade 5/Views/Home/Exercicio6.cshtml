@@ -1,0 +1,18 @@
+﻿@{
+    ViewBag.Title = "Exercicio 6";
+}
+<h2>@ViewBag.Message</h2>
+<h3>Inverter frase</h3>
+
+<form method="post">
+    Digite uma frase: <input type="text" id="inputText1" value="" />
+    <input type="button" id="btn-frase" value="Ok" onclick="invertString()" />
+</form>
+
+<script>
+    function invertString() {
+        var texto = document.getElementById("inputText1").value;
+        texto = texto.split('').reverse().join('')
+        alert(texto)
+    }
+</script>

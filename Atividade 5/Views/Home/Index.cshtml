@@ -1,0 +1,21 @@
+﻿@{
+    ViewBag.Title = "Exercicio 1";
+}
+
+<h2>@ViewBag.Message</h2>
+<h3>Valor das frutas compradas</h3>
+<form method="post">
+    Maça(s): <input type="text" id="inputText1"/> <br /> <br />
+    Pera(s): <input type="text" id="inputText2"/> <br /> <br />
+    Pêssego(s): <input type="text" id="inputText3"/> <br /> <br />
+    <input type="button" name="sumitBt" value="Ok" onclick="somaFrutas()" />
+</form>
+
+<script>
+    function somaFrutas() {
+        var maca = document.getElementById("inputText1").value;
+        var pera = document.getElementById("inputText2").value;
+        var pessego = document.getElementById("inputText3").value;
+        var total = (maca * 0.5) + (pera * 1.10) + (pessego * 1.5);
+        alert("Valor total: R$" + total)     }
+</script>

@@ -1,0 +1,25 @@
+﻿@{
+    ViewBag.Title = "Exercicio 7";
+}
+<h2>@ViewBag.Message</h2>
+<h3>Procura "também"</h3>
+
+<form method="post">
+    <p>Texto: <input type="text" id="inputText1" value="" /></p><br />
+    <input type="button" id="btn-txt" value="Ok" onclick="checkText()" />
+
+</form>
+    
+<script>
+    function checkText() {
+        var text = document.getElementById("inputText1").value;
+        if (text.indexOf("também", 0) > -1) {
+            alert("Os caracteres 'também' foram encontrados")
+        }
+        else {
+            alert("Os caracteres 'também' não foram encontrados")
+        }
+    }
+</script>
+
+

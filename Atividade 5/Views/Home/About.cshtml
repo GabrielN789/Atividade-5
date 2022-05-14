@@ -1,0 +1,16 @@
+﻿@{
+    ViewBag.Title = "Exercício 2";
+}
+<h2>@ViewBag.Message</h2>
+<h3>Quantidade de letras no texto</h3>
+<form method="post">
+    Texto: <input type="text" id="inputText1" value="" />
+    <input type="button" value="Ok" onclick="lenString()" />
+</form>
+<br /><br /><p id= "result"></p>
+<script>
+    function lenString() {
+        var aux = document.getElementById("inputText1").value;
+        document.getElementById("result").innerHTML = "Quantidade de letras: " + aux.length;
+    }
+</script>
